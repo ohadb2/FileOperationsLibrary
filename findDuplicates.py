@@ -7,7 +7,7 @@ def findDup(pathToSearch="None"):
     # Create a dictionary to save md5 as key and filename as value
     md5OfFiles = {}
     # If user not send any path to search, program will call to function that will set default path per Operation System
-    if (pathToSearch == "None"):
+    if pathToSearch == "None":
         pathToSearch = dp.setDefualtPath()
     for root, dirs, files in os.walk(pathToSearch):
         for name in files:

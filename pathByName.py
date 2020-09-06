@@ -9,7 +9,7 @@ def getPathByName(fileName, pathToSearch="None"):
     filePaths = np.array([])
 
     # If user not send any path to search, program will call to function that will set default path per Operation System
-    if (pathToSearch == "None"):
+    if pathToSearch == "None":
         pathToSearch = dp.setDefualtPath()
 
     for root, dirs, files in os.walk(pathToSearch):

@@ -4,7 +4,7 @@ import copyToWorkDirectory
 import findDuplicates
 import os
 
-while (1):
+while 1:
     print("Please choose operation to run:")
     print("\t1. Find a file path by file name.")
     print("\t2. Count the number of files with a specific extension.")
