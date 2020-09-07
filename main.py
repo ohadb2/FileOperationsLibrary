@@ -30,7 +30,7 @@ while 1:
                 print("There is #", numFilesWithExt.getNumFilesWithExt(fileExt), "files ending with ", fileExt)
                 break
             else:
-                print("There is #", numFilesWithExt.getNumFilesWithExt(fileExt), "files ending with ", fileExt, "in:", workingPath)
+                print("There is #", numFilesWithExt.getNumFilesWithExt(fileExt, workingPath), "files ending with ", fileExt, "in:", workingPath)
                 break
         elif operationToRun == 3:
             workingPath = input("Please enter path to search (Leave empty to search everywhere)")

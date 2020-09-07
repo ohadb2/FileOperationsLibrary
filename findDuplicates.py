@@ -11,7 +11,7 @@ def findDup(pathToSearch="None"):
         pathToSearch = dp.setDefualtPath()
     for root, dirs, files in os.walk(pathToSearch):
         for name in files:
-            md5_hash = hashlib.md5()
+            md5Hash = hashlib.md5()
             try:
                 workFile = open(os.path.abspath(os.path.join(root, name)), "rb")
             except PermissionError:
@@ -24,8 +24,8 @@ def findDup(pathToSearch="None"):
                 except OSError:
                     pass
                 else:
-                    md5_hash.update(content)
-                    digest = md5_hash.hexdigest()
+                    md5Hash.update(content)
+                    digest = md5Hash.hexdigest()
                     # If the key already exist, add the filename to the list
                     if (digest in md5OfFiles.keys()):
                         md5OfFiles[digest].append(os.path.abspath(os.path.join(root, name)))

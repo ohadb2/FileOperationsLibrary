@@ -10,7 +10,7 @@ def getNumFilesWithExt(fileExt, pathToSearch="None"):
 
     for root, dirs, files in os.walk(pathToSearch):
         for file in files:
-            if file.endswith(fileExt):
+            if file.endswith(fileExt.upper()) or file.endswith(fileExt.lower()):
                 count += 1
 
     return count
