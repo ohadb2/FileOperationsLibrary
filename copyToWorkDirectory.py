@@ -14,12 +14,13 @@ def copyFileToWorkDirectory(filePath):
         print("There is no free space to copy this file")
         return
     else:
-        fileName = filePath.rsplit('/', 1)
         # Check what is the running platform to know the system command to use
         runningPlatform = platform
         if runningPlatform == "linux" or runningPlatform == "linux2" or runningPlatform == "darwin":
+            fileName = filePath.rsplit('/', 1)
             os.system('cp ' + filePath + ' ' + workingDirectory)
         elif runningPlatform == "win32":
+            fileName = filePath.rsplit('\\', 1)
             os.system('copy ' + filePath + ' ' + workingDirectory)
         # Check if file copy successfully
         if (os.path.isfile(workingDirectory + '/' + fileName[1])):
