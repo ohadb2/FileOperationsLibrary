@@ -18,6 +18,8 @@ def findDup(pathToSearch="None"):
                 pass
             except FileNotFoundError:
                 pass
+            except OSError:
+                pass
             else:
                 try:
                     content = workFile.read()
